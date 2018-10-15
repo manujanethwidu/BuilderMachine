@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="1300.0" prefHeight="900.0" prefWidth="1900.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.BuilderController">
+   <children>
+      <Pane fx:id="prtPane" layoutX="525.0" layoutY="97.0" prefHeight="900.0" prefWidth="1800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox fx:id="vboxTireDescr" layoutX="14.0" layoutY="228.0" prefHeight="132.0" prefWidth="1657.0" style="-fx-background-color: yellow;">
+               <children>
+                  <Label fx:id="descriptionLBL" prefHeight="98.0" prefWidth="1657.0" text="Tire Detail" textFill="#1f4ac3">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="swBrandNameLBL" prefWidth="1261.0" text="SWMsg BrandName Detail" textFill="#1f4ac3">
+                     <font>
+                        <Font size="50.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Button layoutX="351.0" layoutY="419.0" mnemonicParsing="false" onAction="#changeScreenBtnPushed" text="Button" />
+         </children></Pane>
+      <GridPane layoutX="348.0" layoutY="477.0" prefHeight="103.0" prefWidth="313.0" AnchorPane.bottomAnchor="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="69.0" minHeight="0.0" prefHeight="62.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="103.0" minHeight="10.0" prefHeight="41.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <StackPane prefHeight="57.0" prefWidth="157.0">
+               <children>
+                  <Label text="SN">
+                     <font>
+                        <Font size="25.0" />
+                     </font></Label>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="48.0" prefWidth="156.0" GridPane.columnIndex="1">
+               <children>
+                  <TextField fx:id="sntxt" prefHeight="54.0" prefWidth="175.0" promptText="Serial Number">
+                     <font>
+                        <Font size="25.0" />
+                     </font></TextField>
+               </children>
+            </StackPane>
+            <Button fx:id="snChangebtn" mnemonicParsing="false" onAction="#changeSN" prefHeight="44.0" prefWidth="154.0" text="Change" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+         </children>
+      </GridPane>
+      <HBox layoutX="20.0" layoutY="14.0" prefHeight="231.0" prefWidth="1877.0" spacing="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <GridPane prefHeight="216.0" prefWidth="1711.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="684.0" minWidth="10.0" prefWidth="501.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="669.0" minWidth="10.0" prefWidth="480.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="581.0" minWidth="104.0" prefWidth="406.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="581.0" minWidth="151.0" prefWidth="478.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="tireTypelbl" maxHeight="197.0" prefHeight="155.0" prefWidth="380.0" style="-fx-background-color: yellow;" text="M12X" textFill="#da110d" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="135.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="totalWeightlbl" maxHeight="197.0" prefHeight="159.0" prefWidth="411.0" style="-fx-background-color: yellow;" text="888.88" textFill="#030000" GridPane.columnIndex="1">
+                     <font>
+                        <Font name="SimSun" size="100.0" />
+                     </font>
+                     <padding>
+                        <Insets left="20.0" />
+                     </padding>
+                     <GridPane.margin>
+                        <Insets left="30.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Button fx:id="oKButton" maxHeight="197.0" mnemonicParsing="false" onAction="#insertDatatoBuilder" prefHeight="197.0" prefWidth="391.0" style="-fx-background-color: blue;" text="OK" textFill="#d4e4d7" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="72.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Button>
+                  <TextField fx:id="scaleTxtFld" maxHeight="206.0" prefHeight="206.0" prefWidth="483.0" text="789.48">
+                     <font>
+                        <Font name="SimSun" size="100.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </GridPane>
+         </children>
+      </HBox>
+      <GridPane fx:id="gridPaneTireDetails" layoutX="38.0" layoutY="600.0" prefHeight="153.0" prefWidth="410.0" AnchorPane.bottomAnchor="150.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="189.0" minWidth="10.0" prefWidth="90.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="363.0" minWidth="10.0" prefWidth="95.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="330.0" minWidth="10.0" prefWidth="80.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="144.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="bCaplbl" text="Base" GridPane.rowIndex="1">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="cCaplbl" text="Cusion" GridPane.rowIndex="2">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="trCaplbl" text="TR" GridPane.rowIndex="3">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="bandCaplbl" text="Band" GridPane.rowIndex="4">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="bclbl" prefHeight="32.0" prefWidth="195.0" text="..." StackPane.alignment="CENTER_LEFT">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="bwgtlbl" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="32.0" prefWidth="74.0" text="..." textAlignment="RIGHT" StackPane.alignment="CENTER_RIGHT">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Label fx:id="cclbl" prefHeight="32.0" prefWidth="196.0" text="..." StackPane.alignment="CENTER_LEFT">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <children>
+                  <Label fx:id="trclbl" prefHeight="32.0" prefWidth="199.0" text="..." StackPane.alignment="CENTER_LEFT">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <children>
+                  <Label fx:id="bandNamelbl" prefHeight="32.0" prefWidth="197.0" text="..." StackPane.alignment="CENTER_LEFT">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <children>
+                  <Label fx:id="cwgtlbl" alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="74.0" text="..." StackPane.alignment="CENTER_RIGHT">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <children>
+                  <Label fx:id="trwgtlbl" alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="74.0" text="..." StackPane.alignment="CENTER_RIGHT">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <children>
+                  <Label fx:id="standardBandWgtlbl" alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="74.0" text="..." StackPane.alignment="CENTER_RIGHT">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
+               <children>
+                  <Label fx:id="actBandWgtlbl" alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="143.0" text="....." textAlignment="RIGHT">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3">
+               <children>
+                  <Label fx:id="ActWgtCaplbl" alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="76.0" text="Actual" textAlignment="RIGHT">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <children>
+                  <Label fx:id="actTrwgtlbl" alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="112.0" text="...." StackPane.alignment="CENTER_RIGHT">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <Label fx:id="bondCaplbl" text="Bonding" GridPane.rowIndex="5">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Label>
+            <StackPane alignment="BOTTOM_LEFT" prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="5">
+               <children>
+                  <Label fx:id="bondWgtlbl" alignment="CENTER_RIGHT" prefHeight="32.0" prefWidth="74.0" text="..." StackPane.alignment="CENTER_RIGHT">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="2">
+               <children>
+                  <Label fx:id="SpecWgtCaplbl" alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="98.0" text="Spec">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+         </children>
+      </GridPane>
+      <Label fx:id="snMsglbl" text="." />
+      <GridPane layoutX="38.0" layoutY="753.0" prefHeight="90.0" prefWidth="292.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.0" minWidth="138.0" prefWidth="138.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="230.0" minWidth="4.0" prefWidth="230.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="28.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="46.0" minHeight="10.0" prefHeight="27.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="79.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+               <children>
+                  <Label text="Tyre Code">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </StackPane>
+            <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Label fx:id="bandWgtlbl" text="Band Weight">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </StackPane>
+            <StackPane prefHeight="53.0" prefWidth="157.0" GridPane.rowIndex="2">
+               <children>
+                  <TextField fx:id="tireCodetxt" maxWidth="100.0" prefHeight="30.0" prefWidth="50.0" promptText="Tire Code">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </StackPane>
+            <StackPane prefHeight="57.0" prefWidth="154.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <TextField fx:id="bandWeighttxt" maxWidth="91.0" prefHeight="37.0" prefWidth="91.0" promptText="Band Weight">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </StackPane>
+         </children>
+      </GridPane>
+      <Button fx:id="bandWgtStickerbtn" layoutX="1454.0" layoutY="738.0" mnemonicParsing="false" onAction="#TireWGT" prefHeight="153.0" prefWidth="220.0" style="-fx-background-color: orange;" text="GET BAND WEIGHT" textAlignment="CENTER" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="150.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="1235.0" layoutY="735.0" mnemonicParsing="false" onAction="#refreshWholeScene" prefHeight="153.0" prefWidth="260.0" text="REFRESH" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="405.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0" startY="1.0">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill></Button>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff" height="185.0" layoutX="17.0" layoutY="590.0" opacity="0.09" stroke="BLACK" strokeType="INSIDE" width="502.0" AnchorPane.bottomAnchor="125.0" />
+      <TextField fx:id="stabilitylbl" prefHeight="103.0" prefWidth="112.0" text="s" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font size="27.0" />
+         </font>
+      </TextField>
+      <Label fx:id="demandlbl" prefHeight="73.0" prefWidth="380.0" text="Demand:-" AnchorPane.bottomAnchor="200.0" AnchorPane.leftAnchor="550.0">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
